@@ -12,7 +12,7 @@ class Project extends Model
     protected $table = 'projects';
 
     protected $fillable = [
-        'categories_id',
+        'category_id',
         'title',
         'slug',
         'project_code',
@@ -27,7 +27,7 @@ class Project extends Model
     }
 
     public function projectImages(){
-        return $this->hasMnay(ProjectsImage::class);
+        return $this->hasMany(ProjectImage::class);
     }
 
     public function projectSpecs(){
